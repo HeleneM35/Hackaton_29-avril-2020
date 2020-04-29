@@ -1,9 +1,13 @@
 #logoCovidEscape {
     display: flex;
-    align-self: center;
-    width: 40%;
+    justify-content: center;
+    width: 35%;
     height: auto;
-    
+    filter: opacity(90%);
+    -webkit-filter: opacity(90%);
+    border-radius: 17px;
+    box-shadow: 2px 2px 0 rgb(211, 62, 62);
+    margin-left: 32%;
 }
 
 

@@ -6,15 +6,7 @@ import {
   Collapse,
   Navbar,
   NavbarToggler,
-  NavbarBrand,
   Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
 } from 'reactstrap';
 
 
@@ -25,14 +17,14 @@ const Header = (props) => {
   return (
     
     <div>
-      <Navbar color="dark" dark expand="md">
+      <Navbar style ={{backgroundColor:'#0e0245'}} dark expand="md">
       <img id='logoCovidEscape' src={logo} alt='logoCovid'/>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
-            <NavItem>
+            {/* <NavItem>
               <NavLink href="/components/">Home</NavLink>
-            </NavItem>
+            </NavItem> */}
             </Nav>
         </Collapse>
       </Navbar>

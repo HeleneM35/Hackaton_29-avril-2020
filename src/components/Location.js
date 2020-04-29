@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Countries() {
+function Location() {
     return (
         <div>
             
@@ -8,4 +8,4 @@ function Countries() {
     )
 }
 
-export default Countries
+export default Location
