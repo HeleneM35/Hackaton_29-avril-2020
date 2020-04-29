@@ -1,0 +1,47 @@
+h1, h2 {
+   color: rgb(88, 70, 168);
+}
+
+.photos1 {
+    width: 88%;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.7);
+    margin-top: 5px; 
+}
+
+.photos1:hover { 
+    width: 92%;
+    box-shadow: 1px 10px 25px 0 rgba(0, 234, 255, 0.7);
+}
+
+.photos2 {
+    width: 60%;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.7);
+    margin-top: 5px; 
+}
+
+.photos2:hover { 
+    width: 63%;
+    box-shadow: 1px 10px 25px 0 rgba(0, 234, 255, 0.7);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.ligne1 {
+    display: flex;
+    margin-top: 10px; 
+}
+
+.ligne2 {
+    display: flex; 
+    margin-top: 50px;  
+}
+
+h2 {
+    text-align: center; 
+    border-top: 0.1em solid rgb(227, 227, 248);
+    border-right: 0.1em solid rgb(227, 227, 248);
+    padding-top: 15px;
+}
