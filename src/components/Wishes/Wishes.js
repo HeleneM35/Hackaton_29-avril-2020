@@ -28,7 +28,7 @@ class Wishes extends Component {
                 <h1>Pendant cette période de confinement, il est difficile de s'évader.</h1> 
                 <h1>Où voulez-vous vous échapper ?</h1>
 
-                <div className="container">
+                <div className="box">
                  
                     <div className="ligne1">
                         <div className="p1">
@@ -36,12 +36,12 @@ class Wishes extends Component {
                              <img className="photos1" src={plage} alt="Plages"/>
                         </div>
 
-                        <div className="p2">                     
+                        <div className="p1">                     
                             <h2>Forêts</h2>
                             <img className="photos1" src={foret} alt="Forêts"/>
                         </div>
 
-                        <div className="p3"> 
+                        <div className="p1"> 
                             <h2>Montagnes</h2>
                             <img className="photos1" src={montagne} alt="Montagnes"/>
                         </div>
