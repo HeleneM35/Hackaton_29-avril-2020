@@ -1,18 +1,18 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Wishes from './components/Wishes';
-import Navbar from './components/Navbar';
-import Countries from './components/Countries';
-import Continents from './components/Continents';
-import CamList from './components/CamList';
-import Cams from './components/Cams';
+import Wishes from './Wishes';
+import Header from './Header/Header';
+import Countries from './Countries';
+import Continents from './Continents';
+import CamList from './Page_Cams/CamList';
+import Cams from './Page_Cams/Cams';
 
 
 
 function Router() {
     return (
         <div>
-            <Navbar />
+            <Header />
             <Switch>
                 <div className="routeLink">
                     <Route exact path='/' component={Wishes} />
