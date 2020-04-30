@@ -2,8 +2,10 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Wishes from './Wishes/Wishes';
 import Header from './Header/Header';
-import Location from './Location';
+import Location from './Location/Location';
 import CamList from './Page Cams/CamList';
+
+
 function Router() {
     return (
         <div>

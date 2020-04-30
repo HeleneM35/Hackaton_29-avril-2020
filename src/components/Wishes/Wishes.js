@@ -1,12 +1,12 @@
 import React from 'react'
-import { Component } from 'react'
+import { Component } from 'react';
+import { Link} from 'react-router-dom';
 import fondmarin from './images/fondmarin.jpg'
 import foret from './images/foret.jpg'
 import montagne from './images/montagne.jpg'
 import plage from './images/plage.jpg'
 import ville from './images/ville.jpg'
 import './Wishes.css'
-import { Link } from 'react-router-dom'
 
 
 
@@ -14,6 +14,11 @@ class Wishes extends Component {
     constructor(props){
         super(props)
         this.state = {
+        //   fondmarin : false,
+        //   foret : false,
+        //   montagne : false,
+        //   plage : false,
+        //   ville : false,
           category : "",
         }
       }
@@ -23,7 +28,7 @@ class Wishes extends Component {
         return (
             <div className="Wishes">
                 <h1>Pendant cette période de confinement, il est difficile de s'évader.</h1> 
-                <h1>Où voulez-vous vous échapper ?</h1>
+                <h2>Où voulez-vous vous échapper ?</h2>
 
                 <div className="box">
                  

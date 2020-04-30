@@ -13,6 +13,21 @@ function CamList(props) {
         axios.get(`https://api.windy.com/api/webcams/v2/list/category=${category}/continent=${continent}/country=${country}?show=webcams:image,location,player&key=${APIKey}`)
             .then(response => setTheCamList(response.data.result.webcams))
     }
+
+    let catégorie = 0
+
+
+    if (category === "beach") {
+        catégorie = 'Plages'
+    } else if (category === "forest") {
+        catégorie = 'Forêts';
+    } else if (category === "mountain") {
+        catégorie = 'Montagnes';
+    } else if (category === "underwater") {
+        catégorie = 'Fonds Marins';
+    } else if (category === "city") {
+        catégorie = 'Villes';
+    }
     useEffect(() => {
         getList()
     }, [])
@@ -20,7 +35,7 @@ function CamList(props) {
     console.log(theCamList)
     return (
         <>
-            <h1> -- {category} {props.continentName} {props.countryName} --</h1>
+            <h1> -- {catégorie} {props.continentName} {props.countryName} --</h1>
             {theCamList.map((cam) => { 
         return (
             <>

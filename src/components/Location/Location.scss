@@ -1,0 +1,28 @@
+.continents, .pays {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.titres {
+margin-top: 20px;
+margin-bottom: 20px;
+}
+
+.resultat {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width:400px)
+{
+    .continents, .pays {
+        flex-direction: column;
+    }
+}
+
+
+
+@import '~bootstrap/scss/bootstrap.scss';

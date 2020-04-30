@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-//import { Link, NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import './header.scss'
 import logo from './logo.jpg';
 import {
@@ -15,11 +15,12 @@ const Header = (props) => {
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    
+
     <div>
-      <Navbar className="header" style ={{backgroundColor:'#0e0245'}} dark expand="md">
-      <img id='logoCovidEscape' src={logo} alt='logoCovid'/>
-        <NavbarToggler onClick={toggle} />
+      <Navbar style={{ backgroundColor: '#0e0245' }} dark expand="md">
+        <NavLink to="/">
+        <img id='logoCovidEscape' src={logo} alt='logoCovid' /></NavLink>
+        {/* <NavbarToggler onClick={toggle} /> */}
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             {/* <NavItem>

@@ -1,16 +1,23 @@
-h1, h2 {
-   color: rgb(88, 70, 168);
+h1, h2, h3 {
+   color: rgb(14, 2, 69);
+   font-family: 'Viminalis', Arial, sans-serif;
 }
 
 h1 {
-    padding-top: 10px;
+    padding-top: 30px;
     text-align: center;
-    font-size: 30px !important;
+    font-size: 20px !important;
 }
 
 h2 {
     text-align: center; 
-    font-size: 25px !important;
+    font-size: 15px !important;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold !important;;
+    font-size: 12px!important;
 }
 
 .box {
@@ -48,5 +55,14 @@ h2 {
 .ligne2 {
     display: flex; 
     margin-top: 50px;  
+    margin-bottom: 8%;
 }
+
+@media screen and (max-width:400px)
+{
+    .ligne1, .ligne2 {
+        flex-direction: column;
+    }
+}
+
 
