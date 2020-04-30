@@ -3,7 +3,7 @@ import { ContextContinent } from '../Context/ContextContinent';
 import { ContextCountry } from '../Context/ContextCountry';
 import CountryList from './CountryList';
 
-const ContinentList = (continent) => {
+const ContinentList = (continents) => {
     return (
         <>
             {continents.map(continent => {

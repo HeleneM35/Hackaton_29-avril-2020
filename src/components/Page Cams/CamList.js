@@ -4,13 +4,13 @@ import Iframe from "react-iframe";
 
 const APIKey = '7ESCVeg0KgkQwgRo1PtacPmPisCPQwvP'
 
-function CamList() {
+function CamList(props) {
     const [theCamList, setTheCamList] = useState([])
-    const category = 'city'
-    const continent = 'OC'
-    const country = '/country=AU'
+    const category = props.category
+    const continent = props.continent
+    const country = props.country
     function getList() {
-        axios.get(`https://api.windy.com/api/webcams/v2/list/category=${category}/continent=${continent}${country}?show=webcams:image,location,player&key=${APIKey}`)
+        axios.get(`https://api.windy.com/api/webcams/v2/list/category=${category}/continent=${continent}/country=${country}?show=webcams:image,location,player&key=${APIKey}`)
             .then(response => setTheCamList(response.data.result.webcams))
     }
     useEffect(() => {
