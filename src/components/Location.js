@@ -171,12 +171,18 @@ function Location()  {
     const [continent, setContinent] = useState()
     const [countrySelection, setCountrySelection] = useState([])
     const [country, setCountry] = useState()
-    // const [continentCode, setContinentCode] = countries.map(country => {return (country.continent === continent ? country.codeContinent : "")})
+    const [continentCode, setContinentCode] = useState()
     const [countryCode, setCountryCode] = useState()
 
     function checkLocation(location) {
-        
+        setContinent(location.continent)
+        setContinentCode(location.codeContinent)
         setCountrySelection(location.countries)
+    }
+
+    function checkCountry(country) {
+        setCountry(country.name)
+        setCountryCode(country.code)
     }
 
     function showresults() {
@@ -184,7 +190,7 @@ function Location()  {
     }
     switch (status) {
         case "results":
-            return <CamList category={category} continent={continent} country={country} />;
+            return <CamList category={category} continent={continentCode} country={countryCode} continentName={continent} countryName={country} />;
         case "choice":
     return (
         <>
@@ -198,7 +204,7 @@ function Location()  {
         <h4>Choisis un pays :</h4>
             {countrySelection.map(country => (
                     <> 
-                    <button key={country.name}> {country.name} </button>
+                    <button key={country.name} onClick={()=> checkCountry(country)}> {country.name} </button>
                     </>
             ))}
 

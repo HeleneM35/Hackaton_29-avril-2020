@@ -20,7 +20,7 @@ function CamList(props) {
     console.log(theCamList)
     return (
         <>
-            <h1> -- {category} {continent} {country} --</h1>
+            <h1> -- {category} {props.continentName} {props.countryName} --</h1>
             {theCamList.map((cam) => { 
         return (
             <>

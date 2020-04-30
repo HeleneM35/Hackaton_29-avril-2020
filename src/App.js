@@ -1,6 +1,5 @@
 import React from 'react';
 import './App.css';
-import CamList from './components/Page Cams/CamList';
 import Location from './components/Location'
 
 function App() {
