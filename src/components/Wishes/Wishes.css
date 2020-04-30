@@ -58,3 +58,9 @@ h3 {
     margin-bottom: 8%;
 }
 
+@media screen and (max-width:400px)
+{
+    .ligne1, .ligne2 {
+        flex-direction: column;
+    }
+}
