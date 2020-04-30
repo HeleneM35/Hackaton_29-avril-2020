@@ -2,9 +2,7 @@ import React from 'react'
 
 function Wishes() {
     return (
-        <div>
-            
-        </div>
+        <h1>Choix des envies</h1>
     )
 }
 
