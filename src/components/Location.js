@@ -150,10 +150,6 @@ const ContextLocation = [
                 code: 'DE'
             },
             {
-                name: 'Allemagne',
-                code: 'DE'
-            },
-            {
                 name: 'Pays-Bas',
                 code: 'NL'
             }
@@ -165,9 +161,9 @@ const Error = () => (
         Something went <strong>wrong</strong>!
     </p>
 );
-function Location()  {
+function Location(props)  {
     const [status, setStatus] = useState('choice')
-    const [category, setCategory] = useState('beach')
+    const [category, setCategory] = useState(props.location.state)
     const [continent, setContinent] = useState()
     const [countrySelection, setCountrySelection] = useState([])
     const [country, setCountry] = useState()
@@ -188,12 +184,15 @@ function Location()  {
     function showresults() {
         setStatus('results')
     }
+    console.log(category)
     switch (status) {
         case "results":
             return <CamList category={category} continent={continentCode} country={countryCode} continentName={continent} countryName={country} />;
         case "choice":
     return (
         <>
+
+    <h3>Categorie choisie : {category}</h3>
         <h4>Choisis un continent :</h4>
             {ContextLocation.map(location => (
                     <>

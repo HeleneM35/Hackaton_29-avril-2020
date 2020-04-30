@@ -1,0 +1,52 @@
+h1, h2 {
+   color: rgb(88, 70, 168);
+}
+
+h1 {
+    padding-top: 10px;
+    text-align: center;
+    font-size: 30px !important;
+}
+
+h2 {
+    text-align: center; 
+    font-size: 25px !important;
+}
+
+.box {
+    display: flex ;
+    flex-direction: column ;
+}
+
+.photos1 {
+    width: 94%;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.7);
+    margin-left: 3%;
+}
+
+.photos1:hover { 
+    width: 98%;
+    box-shadow: 1px 10px 25px 0 rgba(0, 234, 255, 0.7);
+}
+
+.photos2 {
+    width: 63%;
+    box-shadow: 10px 10px 25px 0 rgba(0, 0, 0, 0.7); 
+    margin-left: 20%;
+}
+
+.photos2:hover { 
+    width: 66%;
+    box-shadow: 1px 10px 25px 0 rgba(0, 234, 255, 0.7);
+}
+
+.ligne1 {
+    display: flex ;
+    margin-top: 20px; 
+}
+
+.ligne2 {
+    display: flex; 
+    margin-top: 50px;  
+}
+
