@@ -13,13 +13,11 @@ function Router() {
             <Switch>
                 <div className="routeLink">
                     <Route exact path='/' component={Wishes} />
-                    <Route path='/location' component={Location} />
-                    <Route path='/camlist' component={CamList} />
-                 </div>
+                    <Route exact path='/location' component={Location} />
+                    <Route exact path='/camlist' component={CamList} />
+                </div>
             </Switch>
-
         </div>
     )
 }
-
 export default Router

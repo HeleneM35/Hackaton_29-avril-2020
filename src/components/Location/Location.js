@@ -153,10 +153,6 @@ const ContextLocation = [
                 code: 'DE'
             },
             {
-                name: 'Allemagne',
-                code: 'DE'
-            },
-            {
                 name: 'Pays-Bas',
                 code: 'NL'
             }
@@ -168,29 +164,37 @@ const Error = () => (
         Something went <strong>wrong</strong>!
     </p>
 );
-function Location() {
+function Location(props)  {
     const [status, setStatus] = useState('choice')
-    const [category, setCategory] = useState('beach')
+    const [category, setCategory] = useState(props.location.state)
     const [continent, setContinent] = useState()
     const [countrySelection, setCountrySelection] = useState([])
     const [country, setCountry] = useState()
-    // const [continentCode, setContinentCode] = countries.map(country => {return (country.continent === continent ? country.codeContinent : "")})
+    const [continentCode, setContinentCode] = useState()
     const [countryCode, setCountryCode] = useState()
 
     function checkLocation(location) {
-
+        setContinent(location.continent)
+        setContinentCode(location.codeContinent)
         setCountrySelection(location.countries)
+    }
+
+    function checkCountry(country) {
+        setCountry(country.name)
+        setCountryCode(country.code)
     }
 
     function showresults() {
         setStatus('results')
     }
+    console.log(category)
     switch (status) {
         case "results":
-            return <CamList category={category} continent={continent} country={country} />;
+            return <CamList category={category} continent={continentCode} country={countryCode} continentName={continent} countryName={country} />;
         case "choice":
             return (
                 <>
+                 <h3>Categorie choisie : {category}</h3>
                     <h2 className="titres">Choisis un continent :</h2>
                     <div className="continents">
                         {ContextLocation.map(location => (
@@ -202,10 +206,9 @@ function Location() {
                     <h2 className="titres">Choisis un pays :</h2>
                     <div className="pays">
                     {countrySelection.map(country => (
-                       
-
-                            <Button style={{ backgroundColor: '#0e0245' }} key={country.name}> {country.name} </Button>
-                      
+                    
+                            <Button style={{ backgroundColor: '#0e0245' }} key={country.name} onClick={()=> checkCountry(country)}> {country.name} </Button>
+                            
                     ))}
                     </div>
                     <div className="resultat">

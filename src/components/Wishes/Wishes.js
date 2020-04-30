@@ -14,11 +14,12 @@ class Wishes extends Component {
     constructor(props){
         super(props)
         this.state = {
-          fondmarin : false,
-          foret : false,
-          montagne : false,
-          plage : false,
-          ville : false,
+        //   fondmarin : false,
+        //   foret : false,
+        //   montagne : false,
+        //   plage : false,
+        //   ville : false,
+          category : "",
         }
       }
 
@@ -33,30 +34,47 @@ class Wishes extends Component {
                  
                     <div className="ligne1">
                         <div className="p1">
-                             <h3>Plages</h3>
-                             <Link to={{pathname:"/location"}}><img className="photos1" src={plage} alt="Plages"/></Link>
+                             <h2>Plages</h2>
+                            <Link to ={{pathname: '/location',
+                                state: "beach" }}>
+                                <img className="photos1" src={plage} alt="Plages"/>
+                            </Link> 
                         </div>
 
                         <div className="p1">                     
-                            <h3>Forêts</h3>
-                            <Link to={{pathname:"/location"}}><img className="photos1" src={foret} alt="Forêts"/></Link>
+                            <h2>Forêts</h2>
+                            <Link to ={{pathname: '/location',
+                                state: "forest" }}>
+                                <img className="photos1" src={foret} alt="Forêts"/>
+                            </Link> 
                         </div>
 
                         <div className="p1"> 
-                            <h3>Montagnes</h3>
-                            <Link to={{pathname:"/location"}}><img className="photos1" src={montagne} alt="Montagnes"/></Link>
+                            <h2>Montagnes</h2>
+                            <Link to ={{pathname: '/location',
+                                state: "mountain" }}>
+                                <img className="photos1" src={montagne} alt="Montagnes"/>
+                            </Link>   
                         </div>
                     </div>
 
                     <div className="ligne2">
                         <div className="p4"> 
-                            <h3>Fonds Marins</h3>
-                            <Link to={{pathname:"/location"}}><img className="photos2" src={fondmarin} alt="Fonds Marins"/></Link>
+                            <h2>Fonds Marins</h2>
+                            <Link to ={{pathname: '/location',
+                                state: "underwater" }}>
+                                <img className="photos2" src={fondmarin} alt="Fonds Marins"/> 
+                            </Link>  
+                            
                         </div>
                         
                         <div className="p5"> 
-                            <h3>Villes</h3>
-                            <Link to={{pathname:"/location"}}><img className="photos2" src={ville} alt="Villes"/></Link>
+                            <h2>Villes</h2>
+                            <Link to ={{pathname: '/location',
+                                state: "city" }}>
+                                <img className="photos2" src={ville} alt="Villes"/>
+                            </Link> 
+                            
                         </div>
                     </div>
                              

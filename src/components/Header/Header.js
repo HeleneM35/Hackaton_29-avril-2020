@@ -26,13 +26,13 @@ const Header = (props) => {
             {/* <NavItem>
               <NavLink href="/components/">Home</NavLink>
             </NavItem> */}
-          </Nav>
+            </Nav>
         </Collapse>
       </Navbar>
     </div>
   );
 
-
+  
 }
 
 
