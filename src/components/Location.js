@@ -169,6 +169,20 @@ function Location(props)  {
     const [country, setCountry] = useState()
     const [continentCode, setContinentCode] = useState()
     const [countryCode, setCountryCode] = useState()
+    let catégorie = 0 
+
+
+    if (category === "beach") {
+        catégorie = 'Plages'
+    } else if (category === "forest") {
+        catégorie = 'Forêts';
+    } else if (category === "mountain") {
+        catégorie = 'Montagnes';
+    } else if (category === "underwater") {
+        catégorie = 'Fonds Marins';
+    } else if (category === "city") {
+        catégorie = 'Villes';
+    }
 
     function checkLocation(location) {
         setContinent(location.continent)
@@ -192,7 +206,7 @@ function Location(props)  {
     return (
         <>
 
-    <h3>Categorie choisie : {category}</h3>
+    <h3>Categorie choisie : {catégorie}</h3>
         <h4>Choisis un continent :</h4>
             {ContextLocation.map(location => (
                     <>
